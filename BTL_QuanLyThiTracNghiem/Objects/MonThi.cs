@@ -30,7 +30,7 @@ namespace BTL_QuanLyThiTracNghiem.Objects
         public void LayVeThongTinMonThi(string maMonThi)
         {
             m_maMonThi = maMonThi;
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
             string query = string.Format("select * from tblMonThi where vcMaMonThi='{0}'", maMonThi);
             using (SqlCommand cmd = new SqlCommand(query, cnn))
             {

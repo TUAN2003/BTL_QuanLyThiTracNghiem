@@ -13,7 +13,7 @@ namespace BTL_QuanLyThiTracNghiem.Objects
         public bool LayVeThongTinTaiKhoan(string tenDangNhap, string matKhau)
         {
             bool ketQua;
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
 
             using (SqlCommand cmd = new SqlCommand("sp_dangNhap", cnn))
             {

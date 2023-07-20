@@ -11,7 +11,7 @@ namespace BTL_QuanLyThiTracNghiem.QuerysDB
             (string query, CommandType cmdType = CommandType.Text, string[] listParam = null, object[] values = null)
         {
             DataTable table = new DataTable();
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
             using (SqlCommand cmd = new SqlCommand(query, cnn))
             {
                 cmd.CommandType = cmdType;
@@ -43,7 +43,7 @@ namespace BTL_QuanLyThiTracNghiem.QuerysDB
             DataTable dtable = new DataTable();
             if (maDeThi == -1)
                 return null;
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
 
             using (SqlDataAdapter sda = new SqlDataAdapter("sp_danhSachCauHoiTheoMaDeThi", cnn))
             {
@@ -59,7 +59,7 @@ namespace BTL_QuanLyThiTracNghiem.QuerysDB
             (string query, CommandType cmdtype = CommandType.Text, string[] listParam = null, object[] values = null)
         {
             object value = null;
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
 
             using (SqlCommand cmd = new SqlCommand(query, cnn))
             {

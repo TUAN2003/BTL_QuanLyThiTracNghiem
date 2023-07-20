@@ -10,7 +10,7 @@ namespace BTL_QuanLyThiTracNghiem.QuerysDB
             (string query, CommandType cmdtype = CommandType.Text, string[] listparam = null, object[] values = null)
         {
             int res = 0;
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
             using (SqlCommand cmd = new SqlCommand(query, cnn))
             {
                 cmd.CommandType = cmdtype;

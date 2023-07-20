@@ -24,7 +24,7 @@ namespace BTL_QuanLyThiTracNghiem.Objects
         public void LayVeThongTinSinhVien(string maSinhVien)
         {
             m_MaSinhVien = maSinhVien;
-            SqlConnection cnn = OnLyConnectDB.Instance(ConnectionInfo._CONNECTION_STRING);
+            SqlConnection cnn = OnLyConnectDB.Instance();
             string query = string.Format("select * from tblSinhVien where vcMaSinhVien='{0}'", maSinhVien);
             using (SqlCommand cmd = new SqlCommand(query, cnn))
             {
