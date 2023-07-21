@@ -1,5 +1,4 @@
-﻿using BTL_QuanLyThiTracNghiem.Constants;
-using BTL_QuanLyThiTracNghiem.QuerysDB;
+﻿using BTL_QuanLyThiTracNghiem.QuerysDB;
 using System;
 using System.Data.SqlClient;
 
