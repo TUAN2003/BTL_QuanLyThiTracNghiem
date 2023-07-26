@@ -4,13 +4,13 @@ namespace BTL_QuanLyThiTracNghiem.QuerysDB
 {
     public sealed class OnLyConnectDB
     {
-        private static SqlConnection g_instance;
+        private static SqlConnection instance;
 
         public static SqlConnection Instance()
         {
-            if (g_instance == null)
-                g_instance = new SqlConnection(Constants.ConnectionInfo._CONNECTION_STRING);
-            return g_instance;
+            if (instance == null)
+                instance = new SqlConnection(Constants.ConnectionInfo._CONNECTION_STRING);
+            return instance;
         }
         private OnLyConnectDB() { }
     }
